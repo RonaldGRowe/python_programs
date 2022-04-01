@@ -1,4 +1,4 @@
-!/usr/bin/env python3
+#!/usr/bin/env python3
 
 import time
 
@@ -76,19 +76,19 @@ while startNum <= int(maxNum):
 
 if len(primeList)  == 1:
 
-    numbers = "number"   
+    numbers = "number"
 
 else:
 
      numbers = "numbers" 
 
-#display results                   
+#display results
 
-print("List of prime numbers up to "+str(maxNum)+"\n"+str(primeList))                    
+print("List of prime numbers up to "+str(maxNum)+"\n"+str(primeList))
 
 print(str(len(primeList))+ " prime "+numbers)
 
 stopsec = time.perf_counter()
 
-print(round(stopsec-startsec, 8))                 
+print(round(stopsec-startsec, 8))
 

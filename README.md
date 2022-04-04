@@ -1,5 +1,7 @@
 # Python Programs
-Just programs for fun
+Just programs for fun and to keep me thinking.
+
+[https://replit.com/@RonaldGRowe](FreeCodeCamp Python Tasks)
 
 ## prime numbers script
 ### operation

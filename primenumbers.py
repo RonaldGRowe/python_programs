@@ -2,7 +2,6 @@
 
 import time
 
-#initialize a list of prime numbers
 
 primeList = [2]
 
@@ -24,8 +23,8 @@ while True:
 
         print("Whole number required, >1. -")
 
-#initialize the starting number to start with int 2
 
+#initialize the starting number to start with int 3
 startNum = 3
 
 startsec = time.perf_counter()
@@ -35,22 +34,6 @@ startsec = time.perf_counter()
 while startNum <= int(maxNum):
 
     z = 0
-
-#checking for 0 remainder, will not be prime
-
-#    if startNum % primeList[z] == 0:
-
- #       startNum+=1
-
-#    else:
-
-#if remainder is > 0 increase z by 1
-
-#z determines the prime factor used
-
-#         z+=1
-
-#loop through prime factors
 
     for p in primeList:
 

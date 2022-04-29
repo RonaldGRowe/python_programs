@@ -30,17 +30,25 @@ def check_numbers(maxNum):
     startNum = 3
 #loop through numbers to be checked
     while startNum <= int(maxNum):
+        factorlist = []
         for p in primeList:
-            if startNum % p == 0:
+            if p >= (sqrt(startNum)+1):
+                break
+            else:
+                factorlist.append(p)
+        for f in factorlist:
+            if startNum % f == 0:
                 startNum+=2
                 break
             else:
-                if p == primeList[-1]:
+                if f == factorlist[-1]:
 #add prime factor to primeList
                     primeList.append(startNum)
                     startNum+=2
                     break
-
+        if not factorlist:
+            primeList.append(startnum)
+            startNum+=2
 #determine if plural
 
     numbers = "numbers" 

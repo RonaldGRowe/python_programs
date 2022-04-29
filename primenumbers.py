@@ -2,7 +2,7 @@
 
 #import numpy as np
 import time
-
+from math import sqrt
 
 #primeList = np.array([2])
 primeList = [2]
@@ -30,27 +30,16 @@ def check_numbers(maxNum):
     startNum = 3
 #loop through numbers to be checked
     while startNum <= int(maxNum):
-
-        z = 0
-
         for p in primeList:
-
             if startNum % p == 0:
-
                 startNum+=2
-
                 break
-
             else:
-
-                 z+=1
-
+                if p == primeList[-1]:
 #add prime factor to primeList
-
-        if z == len(primeList):
-#            primeList = np.append(primeList, startNum)
-            primeList.append(startNum)
-            startNum+=2
+                    primeList.append(startNum)
+                    startNum+=2
+                    break
 
 #determine if plural
 

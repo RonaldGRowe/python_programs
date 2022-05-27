@@ -17,7 +17,7 @@ Just programs for fun and to keep me thinking.
 * found out while loop was slower than for loop 
 * .0782065 seconds faster for 10k numbers
 * 5.163216 seconds faster for 100k number
-* also incrementing numerator by 2 was used to elimante even options
+* also incrementing numerator by 2 was used to eliminate even options
 * this only allowed for minimal gains
 * .0144697 seconds faster for 10k numbers incremented by 2 vs 1
 * .8526902 seconds faster for 100k numbers incremented by 2 vs 1

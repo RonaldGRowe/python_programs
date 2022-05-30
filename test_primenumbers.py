@@ -1,4 +1,3 @@
-
 #!/usr/bin/env/ python3
 
 
@@ -16,7 +15,7 @@ class TestPrimeNumbers(unittest.TestCase):
     def test_primenumbers(self):
         self.assertEqual(primenumbers.check_numbers(2),[2])
         self.assertEqual(primenumbers.check_numbers(19),[2, 3, 5, 7, 11, 13, 17, 19])
-
+        self.assertEqual(primenumbers.check_numbers(3),[2, 3])
 
 if __name__ == "__main__":
     unittest.main()

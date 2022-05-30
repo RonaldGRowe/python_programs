@@ -28,9 +28,9 @@ def check_numbers(maxNum):
     startsec = time.perf_counter()
 #initialize the starting number to start with int 3
 #loop through numbers to be checked
+    factorlist = [2]
     for startNum in range(3,int(maxNum)+1, 2):
-        factorlist = []
-        for p in primeList:
+        for p in primeList[primeList.index(factorlist[-1])+1:]:
             if p >= (sqrt(startNum)+1):
                 break
             else:

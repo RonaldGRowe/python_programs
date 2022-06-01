@@ -26,6 +26,7 @@ def get_user_input():
 def check_numbers(maxNum):
     primeList = [2]
     startsec = time.perf_counter()
+    startsec2 = time.perf_counter()
 #initialize the starting number to start with int 3
 #loop through numbers to be checked
     factorlist = [2]
@@ -45,6 +46,7 @@ def check_numbers(maxNum):
                     break
         if not factorlist:
             primeList.append(startnum)
+    stopsec2 = time.perf_counter()
 #determine if plural
 
     numbers = "numbers" 
@@ -52,14 +54,14 @@ def check_numbers(maxNum):
         numbers = "number"
 
 #display results
-    print(f"List of prime numbers up to {maxNum}{chr(10)}{primeList}")
+   # print(f"List of prime numbers up to {maxNum}{chr(10)}{primeList}")
 
     print(f"{len(primeList)} prime {numbers}")
 
     stopsec = time.perf_counter()
 
     print(round(stopsec-startsec, 8))
-
+    print(round(stopsec2-startsec2, 8))
     return primeList
 
 

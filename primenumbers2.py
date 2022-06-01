@@ -30,7 +30,7 @@ def check_numbers(maxNum):
 #initialize the starting number to start with int 3
 #loop through numbers to be checked
     factorlist = [2]
-    for startNum in range(3,int(maxNum)+1, 2):
+    for startNum in range(3,maxNum+1, 2):
         for p in primeList[primeList.index(factorlist[-1])+1:]:
             if p >= (sqrt(startNum)+1):
                 break
@@ -54,7 +54,7 @@ def check_numbers(maxNum):
         numbers = "number"
 
 #display results
-   # print(f"List of prime numbers up to {maxNum}{chr(10)}{primeList}")
+    print(f"List of prime numbers up to {maxNum}{chr(10)}{primeList}")
 
     print(f"{len(primeList)} prime {numbers}")
 

@@ -28,31 +28,27 @@ def check_numbers(maxNum):
     startsec = time.perf_counter()
     startsec2 = time.perf_counter()
 #initialize the starting number to start with int 3
-    startNum = 3
 #loop through numbers to be checked
-    while startNum <= int(maxNum):
-        factorlist = []
-        for p in primeList:
-            if p >= (sqrt(startNum)+1):
+    factorlist = []
+    n = 0 #flistlen
+    for startNum in range(3,maxNum+1, 2):
+        while n < len(primeList):
+            if primeList[n] >= (sqrt(startNum)+1):
                 break
             else:
-                factorlist.append(p)
+                factorlist.append(primeList[n])
+                n += 1
         for f in factorlist:
             if startNum % f == 0:
-                startNum+=2
                 break
             else:
                 if f == factorlist[-1]:
 #add prime factor to primeList
                     primeList.append(startNum)
-                    startNum+=2
                     break
         if not factorlist:
             primeList.append(startnum)
-            startNum+=2
-
     stopsec2 = time.perf_counter()
-
 #determine if plural
 
     numbers = "numbers" 

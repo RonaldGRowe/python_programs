@@ -30,13 +30,17 @@ def check_numbers(maxNum):
 #initialize the starting number to start with int 3
     startNum = 3
 #loop through numbers to be checked
+    factorlist = []
+    flistlen = 0
     while startNum <= int(maxNum):
-        factorlist = []
-        for p in primeList:
-            if p >= (sqrt(startNum)+1):
+        n = flistlen
+        while n < len(primeList):
+            if primeList[n] >= (sqrt(startNum)+1):
                 break
             else:
-                factorlist.append(p)
+                factorlist.append(primeList[n])
+                flistlen += 1
+                n += 1
         for f in factorlist:
             if startNum % f == 0:
                 startNum+=2
@@ -50,11 +54,8 @@ def check_numbers(maxNum):
         if not factorlist:
             primeList.append(startnum)
             startNum+=2
-
-    stopsec2 = time.perf_counter()
-
 #determine if plural
-
+    stopsec2 = time.perf_counter()
     numbers = "numbers" 
     if len(primeList)  == 1:
         numbers = "number"
